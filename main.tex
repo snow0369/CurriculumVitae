@@ -1,0 +1,181 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+
+\usepackage[defernumbers=true, style=numeric, backend=biber, sorting=ydnt]{biblatex}
+
+\newcommand*{\AddCiteToCategory}[1]{%
+  \AtNextCite{\AtEachCitekey{#1}}}
+
+\newcommand{\citeJour}{\AddCiteToCategory{J}\cite}
+\newcommand{\citePrep}{\AddCiteToCategory{JP}\cite}
+\newcommand{\citePate}{\AddCiteToCategory{P}\cite}
+\newcommand{\citeConf}{\AddCiteToCategory{C}\cite}
+
+\addbibresource{journal.bib} 
+\addbibresource{patent.bib}
+\addbibresource{conference.bib}
+\addbibresource{seminar.bib} 
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Gwonhak Lee} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+\address{+82-010-2512-8727 \\ Suwon, Republic of Korea}
+\address{Ph.D. candidate, \href{https://sites.google.com/view/ysqctc}{QCTC Lab}, Department of Nano Science and Technology, Sungkyunkwan University}
+\address{\href{mailto:gwonhak@gmail.com}{gwonhak@gmail.com} \\ \href{https://www.linkedin.com/in/gwonhak-lee-9abb841aa}{LinkedIn} \\ \href{https://github.com/snow0369}{Github}}  %
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Profile}
+{
+\begin{itemize}
+    \item Ph.D. candidate in Nanoscience and Technology at Sungkyunkwan University (expected Feb. 2026) specializing in quantum algorithms for early fault-tolerant quantum computing (EFTQC), with a focus on rigorous error analysis, resource predictability, and practical applicability.
+    \item Research expertise includes quantum Krylov subspace diagonalization, quantum phase estimation, and quantum signal processing, with demonstrated contributions to theoretical modeling, provable algorithm design, and implementation in quantum chemistry simulation frameworks.
+    \item Former Technical Manager at Qunova Computing, leading R\&D on quantum software development and simulation platforms. Proficient in Python-based scientific computing, numerical analysis, and high-performance algorithm optimization.
+\end{itemize}
+
+Keywords: Quantum computing/algorithms, quantum computational chemistry, numerical analysis, early fault tolerance, Krylov methods\\
+}
+%{Software Engineer with 2+ years of experience in XXX, seeking full-time XXX roles.}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education and Career}
+
+
+{\bf Ph.D. in Nanoscience and Technology} \hfill {Feb 2022 - (Feb 2026)}\\
+Sungkyunkwan University \hfill \textit{Suwon, Republic of Korea}\\
+Advisor: Prof. Joonsuk Huh\\
+Thesis: \textit{Improving Reliability of Quantum Krylov Subspace Diagonalization: Error Reduction and Performance Analysis}\\
+GPA: 4.29/4.5
+\begin{itemize}
+    \itemsep -3pt {} 
+     \item Conducting research on theoretical quantum algorithms and chemistry simulation, with a focus on \textbf{early fault-tolerant quantum computing}.
+     \item Critically analyzing practical and non-asymptotic aspects of quantum algorithms, including ill-conditioning.
+     \item Performing precise error analysis and developing error reduction techniques for \textbf{quantum Krylov subspace diagonalization}~\citeJour{Lee2024samplingerror}.
+     \item Designing quantum algorithms inspired by theories from electronic signal processing~\citePrep{FilterState2025}.
+     \item Developing mappings from matrix function evaluation problems to Ising Hamiltonians~\citePrep{MATFUNC2025}.
+     \item Equipped with an advanced mathematical foundation essential for quantum information theory.
+     \item Delivered seminar talks~\citeConf{KIAS2024} and presented at international~\citeConf{QTML2024, QTML2022} and domestic~\citeConf{QISK2025, OSK2024, QISK2024, ICQC2022, OPC2022} conferences.
+     \item Contributed to the patents related to quantum algorithms~\citePate{hadamard, moment}.
+     \item Developing a Python toolkit, \textit{Openfermion Expansion (ofex)}, to support quantum algorithm research. Full source available on \href{https://github.com/snow0369/ofex}{GitHub}.
+\end{itemize}
+
+{\bf Visiting Graduate Student} \hfill {Jun 2023 - Dec 2023}\\
+Dept. of Chemistry, University of Toronto \hfill \textit{Toronto, Ontario, Canada}\\
+Advisor: Prof. Artur F. Izmaylov
+\begin{itemize}
+   \itemsep -3pt {}
+   \item Developed error mitigation techniques for the quantum Krylov subspace diagonalization method~\citeJour{Efficient2025}.
+   \item Presented related research in a departmental seminar~\citeConf{QJM2023} and at a conference~\citeConf{SCP2023}.
+\end{itemize}
+
+{\bf Technical Manager} \hfill {Feb 2021 - Feb 2022}\\
+Qunova Computing \href{https://qunovacomputing.com/}{(link)} \hfill \textit{Daejeon, Republic of Korea}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Quantum start-up focused on developing quantum software and framework, with a focus on quantum chemistry simulation.
+     \item Led R\&D on quantum chemistry simulation and related software solutions.
+     \item Built a framework for fragmented molecular orbital method, incorporating variational quantum eigensolver (VQE) as its subroutine.
+     \item Received the Rigetti Partner Award at CDL 2021 Hackathon~\href{https://github.com/CDL-Quantum/Hackathon2021}{(Github link)}.
+     \item Delivered an IBM Qiskit tutorial at the KICS Summer School on Quantum Computing~\citeConf{KICS2021Tutorial}.
+ \end{itemize}
+
+{\bf Software Engineer} \hfill Jan 2020 - Dec 2020\\
+Looko Inc. \href{https://www.acloset.app/}{(link)} \hfill \textit{Daejeon, Republic of Korea}
+ \begin{itemize}
+    \itemsep -3pt {} 
+    \item Start-up providing AI-based fashion styling experiences for consumers.
+    \item Collaborated with other developers to build front-end and back-end components of a mobile service.
+    \item Applied machine learning techniques to real-world image processing tasks.
+ \end{itemize}
+
+{\bf M.S. in Electrical Engineering} \hfill {Feb 2019 - Feb 2021}\\
+KAIST \hfill \textit{Daejeon, Republic of Korea}\\
+Advisor: Prof. June-Koo Kevin Rhee\\
+Thesis: \textit{Physical and Flexible Qubit Coupled Cluster for Quantum Chemistry Simulation}\\
+Coursework: Information Theory, Quantum Information, Statistical Learning Theory, Solid Physics\\
+GPA: 3.98/4.3\\
+Recipient of a full government-funded scholarship.
+\begin{itemize}
+    \itemsep -3pt {} 
+    \item Studied quantum computing and quantum chemistry simulation with a focus on noisy and intermediate-scale quantum (NISQ) algorithms.
+    \item Collaborated with the quantum R\&D team at Hyundai Motors on battery material discovery using VQE~\citeJour{D3CP05570A},\citePate{bosonicapprox}.
+    \item Presented research at domestic conference~\citeConf{KICS2021WINTER, KICS2020SUMMER}.
+\end{itemize}
+
+{\bf B.S. in Semiconductor System Engineering} \hfill {Mar 2012 - Feb 2019}\\
+Sungkyunkwan University \hfill \textit{Suwon, Republic of Korea}\\
+Coursework: Semiconductor Physics, Computer Architecture, Analog and Digital Circuit Design\\
+Advisor: Prof. Byung-Sung Kim\\
+GPA: 4.23/4.5 \\
+Recipient of the Samsung Electronics full scholarship.
+
+{\bf Undergraduate Researcher} \hfill Feb 2018 - Dec 2018\\
+RFMD Lab, Sungkyunkwan University \hfill \textit{Suwon, Republic of Korea}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Developed a real-time FMCW radar signal processing system.
+     \item Programmed FPGA and microprocessor systems for radar control and data acquisition.
+     \item Co-authored the project \textit{``W-Band Radar Altimeter for Drones"}~\citeJour{RADAR}.
+ \end{itemize}
+
+{\bf Internship} \hfill Jan 2017 - Feb 2017\\
+Samsung Electronics, Device Solutions Division \hfill \textit{Yongin, Republic of Korea}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Participated in power management IC (PMIC) development and performance analysis.
+ \end{itemize}
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+
+\nocite{*}
+\begin{rSection}{Published Journal Articles}
+\printbibliography[title={~}, type=article, resetnumbers=true]    
+\end{rSection}
+\begin{rSection}{Articles in Preparation}
+\printbibliography[title={~}, type=unpublished, resetnumbers=true]    
+\end{rSection}
+\begin{rSection}{Patent}
+\printbibliography[title={~}, type=patent, resetnumbers=true]
+\end{rSection}
+\begin{rSection}{Conference and Seminar}
+\printbibliography[title={~}, type=misc, resetnumbers=true]    
+\end{rSection}
+
+
+\begin{rSection}{SKILLS}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }\\
+Language & Python, C/C++, Verilog/VHDL, Matlab\\
+\\
+Theory and Subject & Quantum Algorithms,\\
+                   & Quantum Chemistry,\\
+                   & Numerical Methods,\\
+                   & Function Analysis,\\
+                   & High-dimensional Probability Theory\\
+\\
+Technical Skills & Quantum Computer Programming (Qiskit, Pennylane), \\
+                 & Machine Learning, Signal Processing \\
+%XYZ & A, B, C, D\\
+\end{tabular}\\
+\end{rSection}
+
+
+
+
+\end{document}
